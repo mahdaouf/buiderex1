@@ -12,9 +12,9 @@ export default function Home() {
       <header className="flex justify-between items-center bg-white px-6 py-1">
         <div className="text-white font-bold text-xl">
       <img
-        src='/builder-name.png'
+        src='/logo.png'
         alt="The Builder Network Logo"
-        className="h-12 ml-14 mb-2" // Tailwind CSS classes for the image itself
+        className="h-12 ml-14" // Tailwind CSS classes for the image itself
       />
     </div>
         <nav className="flex items-center space-x-2 text-[#000000] text-sm">
@@ -34,7 +34,7 @@ export default function Home() {
       </header>
         <section>
       {/* Hero Section */}
-     <div style={{ backgroundImage: 'url(1h.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+     <div style={{ backgroundImage: 'url(banner.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
 {/* Main Hero Content */}
 <div className="flex flex-col md:flex-row items-center justify-center px-10 md:px-20 pt-40 pb-32 relative z-10">
@@ -42,14 +42,14 @@ export default function Home() {
   {/* Left Side */}
   <div className="max-w-lg text-white space-y-8 text-center"> {/* Added text-center here */}
     <div className="space-y-2">
-      <p className="text-xs tracking-widest uppercase font-normal">THE RELIABLE WAY TO HIRE A</p>
+      <p className="text-[16px] tracking-widest uppercase font-normal">THE RELIABLE WAY TO HIRE A</p>
       <h1 className="text-[42px] font-kollektif md:text-6xl font-bold ">Trades Person</h1>
     </div>
 
     {/* Search Box */}
 <div className="mt-20 w-full flex justify-center">
   <div className="w-full max-w-md"> {/* This div acts as a container to limit width */}
-    <p className="text-xl mb-8 text-white text-center  font-semibold">What Is Your Job?</p> {/* Added text-white and text-center */}
+    <p className="text-2xl mb-8 text-white text-center  font-semibold">What Is Your Job?</p> {/* Added text-white and text-center */}
     <input
       type="text"
       placeholder="For example: painting" // Updated placeholder text case
@@ -62,11 +62,6 @@ export default function Home() {
     
   </div>
 
-  {/* Left Image (3h.png) */}
-  <img src="3h.png" alt="Left Image" className="absolute left-0 h-[500px] z-0" />
-
-  {/* Right Bottom Image (2h.png) */}
-  <img src="2h.png" alt="Right Bottom Image" className="absolute right-0 -bottom-50" />
 
 </div>
     
@@ -98,7 +93,7 @@ export default function Home() {
 
 
      {/* Stats Section with matching style */}
-  <div className="rounded-tr-2xl  bg-[#1646D2] py-15 text-white flex justify-around text-center mr-[60%] relative">
+  <div className="rounded-tr-2xl  bg-[#1646D2] py-10 text-white flex justify-around text-center mr-[60%] relative">
     <div className=" mx-auto flex flex-col md:flex-row justify-around text-center gap-20 mb-11">
       <div>
         <h2 className="text-3xl font-bold">232,870</h2>
