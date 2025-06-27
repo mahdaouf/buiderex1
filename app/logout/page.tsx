@@ -24,7 +24,7 @@ export default function Page() {
       {/* Left Side: Login Form */}
       <div className="w-full md:w-1/2 flex items-center justify-center px-6 py-12">
         <div className="w-full max-w-sm">
-          <a href="/homepagelight" className="text-sm text-gray-400 inline-block mb-4">
+          <a href="/homepage" className="text-sm text-gray-400 inline-block mb-4">
             &larr; Back to dashboard
           </a>
 
