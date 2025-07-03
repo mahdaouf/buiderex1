@@ -49,14 +49,13 @@ export default function UserManagementPage() {
   const pathname = usePathname();
   const isActive = (path: string) => pathname?.startsWith(path) || false;
 
-  const [open, setOpen] = useState();
   const [page, setPage] = useState(2);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        // Example handler logic if needed
+        // example logic if needed
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -88,7 +87,7 @@ export default function UserManagementPage() {
 
       <main className="flex-1 p-6 space-y-10 w-full">
         <div className="flex justify-between items-center">
-          <div className="text-sm text-gray-600">Pages /Dispute Management</div>
+          <div className="text-sm text-gray-600">Pages / Dispute Management</div>
         </div>
 
         <div className="flex justify-between items-center">
@@ -112,6 +111,7 @@ export default function UserManagementPage() {
           <h1 className="text-2xl font-bold text-[#0866FF]">Dispute Cases</h1>
         </div>
 
+        {/* Table 1 */}
         <section className="bg-white p-6 rounded-lg shadow-sm">
           <div className="mb-4 flex items-center justify-between">
             <div className="flex gap-2 mb-4">
@@ -195,6 +195,7 @@ export default function UserManagementPage() {
           <h1 className="text-2xl font-bold text-[#0866FF]">Dispute Details</h1>
         </div>
 
+        {/* Table 2 */}
         <section className="bg-white p-6 rounded-lg shadow-sm">
           <div className="mb-4 flex items-center justify-between">
             <div className="flex gap-2 mb-4">

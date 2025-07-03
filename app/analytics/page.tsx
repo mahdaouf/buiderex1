@@ -21,11 +21,11 @@ export default function Dashboard() {
   const isActive = (path: string) => pathname?.startsWith(path) || false;
 
   const [open, setOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null); // ✅ typed ref
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !(dropdownRef.current as any).contains(event.target)) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setOpen(false);
       }
     };
@@ -66,42 +66,43 @@ export default function Dashboard() {
         {/* Search and Dropdown */}
         <div className="flex justify-between items-center">
           <input
-  type="text"
-  placeholder="Search"
-  className="pl-10 pr-4 py-1.5 rounded-full text-sm bg-[#0866FF] text-white placeholder-white"
-  style={{
-    backgroundImage: "url('/search-icon.svg')", // Replace with your icon path
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'left 10px center', // Adjust position as needed
-    backgroundSize: '16px 16px', // Adjust size as needed
-  }}
-/>
+            type="text"
+            placeholder="Search"
+            className="pl-10 pr-4 py-1.5 rounded-full text-sm bg-[#0866FF] text-white placeholder-white"
+            style={{
+              backgroundImage: "url('/search-icon.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'left 10px center',
+              backgroundSize: '16px 16px',
+            }}
+          />
 
-        <div className="relative inline-block text-left " ref={dropdownRef}>
-  <button
-    type="button"
-    className="bg-[#377DFF] text-white px-7 py-2 rounded text-sm shadow flex items-left gap-2"
-    onClick={() => setOpen((prev) => !prev)}
-  >
-    Bulk Actions
-    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-    </svg>
-  </button>
+          <div className="relative inline-block text-left" ref={dropdownRef}>
+            <button
+              type="button"
+              className="bg-[#377DFF] text-white px-7 py-2 rounded text-sm shadow flex items-left gap-2"
+              onClick={() => setOpen((prev) => !prev)}
+            >
+              Bulk Actions
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
 
-  {open && (
-    <div className="absolute right-0 z-10 mt-2 w-39 rounded-md bg-[#A9C7FF] shadow-lg text-sm text-black ">
-      <button className="w-full text-left px-4 py-2 hover:bg-[#377DFF] hover:text-white">Download Reports</button>
-      <button className="w-full text-left px-4 py-2 hover:bg-[#377DFF] hover:text-white"></button>
-      <button className="w-full text-left px-4 py-2 hover:bg-[#377DFF] hover:text-white"></button>
-    </div>
-  )}
-</div>
-
+            {open && (
+              <div className="absolute right-0 z-10 mt-2 w-39 rounded-md bg-[#A9C7FF] shadow-lg text-sm text-black">
+                <button className="w-full text-left px-4 py-2 hover:bg-[#377DFF] hover:text-white">Download Reports</button>
+                <button className="w-full text-left px-4 py-2 hover:bg-[#377DFF] hover:text-white"></button>
+                <button className="w-full text-left px-4 py-2 hover:bg-[#377DFF] hover:text-white"></button>
+              </div>
+            )}
+          </div>
         </div>
+
         <div className="mt-25">
-        <h1 className="text-[25px] font-bold text-blue-600 mb-4">Key Metrics:</h1>
-         </div>
+          <h1 className="text-[25px] font-bold text-blue-600 mb-4">Key Metrics:</h1>
+        </div>
+
         {/* Top Graphs */}
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
           <div className="bg-white rounded-2xl shadow p-4 w-[700px] h-[450px]">

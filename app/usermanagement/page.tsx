@@ -106,12 +106,14 @@ const renderActionButtons = () => (
         focus:ring-blue-500 focus:border-blue-500
       "
     />
-    {/* SVG Search Icon as an <img> tag */}
-    <img
-      src="/search-153.svg" /* Path to your SVG file */
-      alt="Search Icon"
-      className="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4" /* Positioning and size */
-    />
+    <Image
+  src="/search-153.svg"
+  alt="Search Icon"
+  width={16}
+  height={16}
+  className="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4"
+/>
+
   </div>
 </div>
             <table className="w-full text-sm text-center">
@@ -159,12 +161,14 @@ const renderActionButtons = () => (
         focus:ring-blue-500 focus:border-blue-500
       "
     />
-    {/* SVG Search Icon as an <img> tag */}
-    <img
-      src="/search-153.svg" /* Path to your SVG file */
-      alt="Search Icon"
-      className="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4" /* Positioning and size */
-    />
+    <Image
+  src="/search-153.svg"
+  alt="Search Icon"
+  width={16}
+  height={16}
+  className="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4"
+/>
+
   </div>
 </div>
             <table className="w-full text-sm text-center">
@@ -214,12 +218,14 @@ const renderActionButtons = () => (
         focus:ring-blue-500 focus:border-blue-500
       "
     />
-    {/* SVG Search Icon as an <img> tag */}
-    <img
-      src="/search-153.svg" /* Path to your SVG file */
-      alt="Search Icon"
-      className="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4" /* Positioning and size */
-    />
+    <Image
+  src="/search-153.svg"
+  alt="Search Icon"
+  width={16}
+  height={16}
+  className="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4"
+/>
+
   </div>
 </div>
             <table className="w-full text-sm text-center">

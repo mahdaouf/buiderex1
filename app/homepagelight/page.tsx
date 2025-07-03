@@ -11,11 +11,8 @@ export default function Home() {
       {/* Header */}
       <header className="flex justify-between items-center bg-white px-6 py-1">
         <div className="text-white font-bold text-xl">
-      <img
-        src='/logo.png'
-        alt="The Builder Network Logo"
-        className="h-12 ml-8" // Tailwind CSS classes for the image itself
-      />
+      <Image src="/logo.png" alt="The Builder Network Logo" width={120} height={48} className="ml-8 h-12 w-auto" />
+
     </div>
         <nav className="flex items-center space-x-2 text-[#000000] text-sm">
   <a href="/homepage" className="py-2 px-4 rounded-full bg-white text-[#000000] text-left hover:bg-[#1646D2] hover:text-white transition-colors">
@@ -111,8 +108,7 @@ export default function Home() {
   </div>
 
   {/* Bottom Image Transition (4h.png) */}
-  <img src="4h.png" alt="Bottom Image" className="w-full h-[80px] z-10 relative -mt-20" />
-
+  <Image src="/4h.png" alt="Bottom Image" width={1920} height={80} className="w-full h-[80px] z-10 relative -mt-20" />
 </div>
 </section>
 
@@ -130,7 +126,7 @@ export default function Home() {
             className="object-cover"
           />
         </div>
-   <img src="4h2.png" alt="Bottom Image" className="w-full h-[130px] z-10 relative -mb-20 " />
+   <Image src="/4h2.png" alt="Bottom Image" width={1920} height={130} className="w-full h-[130px] z-10 relative -mb-20" />
   {/* Foreground Content */}
   <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row items-start gap-10 mt-18">
     {/* Left Side - Text + Cards */}
@@ -314,11 +310,7 @@ export default function Home() {
 <section className="relative z-10">
   {/* Background Image */}
   <div className="absolute inset-0 z-0">
-    <img
-      src="/bgphone.jpg" // ✅ replace with your actual background image path
-      alt="Background"
-      className="w-full h-full object-cover"
-    />
+    <Image src="/bgphone.jpg" alt="Background" fill className="object-cover" />
   </div>
 
   {/* Foreground Content */}
@@ -337,16 +329,9 @@ export default function Home() {
 
         {/* App store buttons */}
         <div className="flex gap-1 mb-8 -ml-5 ">
-          <img
-            src="google-play.svg"
-            alt="Get it on Google Play"
-            className="h-12"
-          />
-          <img
-            src="/app-store.svg"
-            alt="Download on the App Store"
-            className="h-12"
-          />
+          <Image src="/google-play.svg" alt="Get it on Google Play" width={135} height={40} className="h-12 w-auto" />
+          <Image src="/app-store.svg" alt="Download on the App Store" width={135} height={40} className="h-12 w-auto" />
+
         </div>
 
         <p className="text-sm">
@@ -360,7 +345,7 @@ export default function Home() {
 
       {/* Phone Image */}
       <div className="md:w-1/2 relative -mt-28 z-10">
-        <img src="/phone.png" alt="App screenshot" className="w-full max-w-xs mx-auto" />
+        <Image src="/phone.png" alt="App screenshot" width={300} height={600} className="w-full max-w-xs mx-auto" />
       </div>
     </div>
   </div>

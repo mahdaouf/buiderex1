@@ -41,7 +41,7 @@ export default function Footer() {
         <li><a href="#" className="underline">How it works</a></li>
         <li><a href="#" className="underline">Find trades</a></li>
         <li><a href="#" className="underline">Customer helpdesk</a></li>
-        <li><a href="#" className="underline">Ask a trades'<br/> person</a></li>
+        <li><a href="#" className="underline">Ask a trades&apos;<br/> person</a></li>
       </ul>
       <ul className="space-y-2">
         <li><a href="#" className="underline">Register as trades<br/>person</a></li>
