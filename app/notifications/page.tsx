@@ -19,17 +19,6 @@ export default function UserManagementPage() {
   const pathname = usePathname();
   const isActive = (path: string) => pathname?.startsWith(path) || false;
 
-const renderActionButtons = () => (
-  <div className="flex justify-center">
-    <Image
-      src="/actions1.png" // Ensure the image is inside the public folder
-      alt="Actions"
-      width={72}
-      height={24}
-      className="object-contain"
-    />
-  </div>
-);
 
 
   return (

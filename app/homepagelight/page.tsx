@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 import JobBanners from "@/components/JobBanners";
 import Footers from "@/components/Footers";
 import ServiceCarousel from '@/components/ServiceCarousel';
@@ -405,7 +404,7 @@ export default function Home() {
                 <span className="text-[#F19100]">&#11088;</span>
               </div>
               <p className="text-gray-200  text-sm ">
-                "Oscar replaced two fence panels that had been blown off by the <br/> wind. He is a very nice guy and got the job done..."
+                &quot;Oscar replaced two fence panels that had been blown off by the <br/> wind. He is a very nice guy and got the job done...&quot;
               </p>
             </div>
             <p className="mt-4 text-sm font-semibold ml-8">AFFINITY DECKING LTD</p>
@@ -424,7 +423,7 @@ export default function Home() {
                 <span className="text-[#FFBD00]">&#11088;</span> {/* One empty star */}
               </div>
               <p className="text-gray-200 text-sm">
-                "Overall the team did an okay job on the cabinet. There was a<br/> delay - which arguably was part my fault for the..."
+                &quot;Overall the team did an okay job on the cabinet. There was a<br/> delay - which arguably was part my fault for the...&quot;
               </p>
             </div>
             <p className="mt-4 text-sm font-semibold ml-8">FOXY FURNITURE LTD</p>
@@ -443,7 +442,7 @@ export default function Home() {
                 <span className="text-[#FFBD00]">&#11088;</span>
               </div>
               <p className="text-gray-200 text-sm">
-                "He did a great job fixing my table! He was very professional, <br/> friendly, and helpful. Highly recommend his serve..."
+                &quot;He did a great job fixing my table! He was very professional, <br/> friendly, and helpful. Highly recommend his serve...&quot;
               </p>
             </div>
             <p className="mt-4 text-sm font-semibold ml-8">CB General Builders</p>

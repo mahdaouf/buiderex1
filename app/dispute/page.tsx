@@ -49,7 +49,7 @@ export default function UserManagementPage() {
   const pathname = usePathname();
   const isActive = (path: string) => pathname?.startsWith(path) || false;
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState();
   const [page, setPage] = useState(2);
   const dropdownRef = useRef<HTMLDivElement>(null);
 

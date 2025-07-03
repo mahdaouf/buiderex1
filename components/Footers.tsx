@@ -115,7 +115,7 @@ const Footers = () => {
   </div>
 
   <div className="mb-2 mr-[10%] ml-[5%]">
-    <p className="font-bold text-[19.38px] mb-6">Our tradespeople's professions</p>
+    <p className="font-bold text-[19.38px] mb-6">Our tradespeople&apos;s professions</p>
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-4">
       {[
         "Handymen", "Painters and\nDecorators", "Builders", "Landscape Gardeners",
