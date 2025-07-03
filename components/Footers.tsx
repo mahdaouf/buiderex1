@@ -1,5 +1,6 @@
 import React from 'react';
-import Image from "next/image";
+import Image from 'next/image';
+
 const Footers = () => {
   return (
     <>
@@ -11,11 +12,13 @@ const Footers = () => {
   {/* Navigation Section */}
   <div className="max-w-7xl mx-auto pb-10 ml-[5%]">
     <div className="text-white font-bold text-xl">
-      <img
-        src="/builder-name.png"
-        alt="The Builder Network Logo"
-        className="h-12 mb-8"
-      />
+      <Image
+              src="/builder-name.png"
+              alt="The Builder Network Logo"
+              width={160}
+              height={48}
+              className="h-12 mb-8 w-auto"
+            />
     </div>
 
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 text-xs text-white">
@@ -75,8 +78,8 @@ const Footers = () => {
 
     {/* Right: App Store Badges */}
     <div className="flex items-center gap-1">
-      <a href=""><img src="/app-store.svg" alt="App Store" className="h-10" /></a>
-      <a href=""><img src="/google-play.svg" alt="Google Play" className="h-10" /></a>
+      <Image src="/google-play.svg" alt="Get it on Google Play" width={135} height={40} className="h-12 w-auto" />
+      <Image src="/app-store.svg" alt="Download on the App Store" width={135} height={40} className="h-12 w-auto" />
     </div>
   </div>
   {/* Bottom Links */}
