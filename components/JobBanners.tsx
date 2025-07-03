@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function JobBanners() {
   return (
     <div className="bg-[#1646D2] py-8  px-2">
-      <div className="relative rounded-xl  max-w-6xl mx-auto h-[240px] flex items-center px-6 -mt-32 z-10">
+      <div className="relative rounded-xl  max-w-7xl mx-auto h-[240px] flex items-center px-6 -mt-32 z-10">
 
         {/* Background Image */}
         <Image
@@ -22,24 +22,15 @@ export default function JobBanners() {
         </div>
 
         {/* Button */}
-        <div className="ml-auto mr-[7%] z-10">
-          <button className="bg-blue-600  text-white text-sm font-medium px-10 py-2 rounded-full flex items-center gap-2 hover:bg-blue-700 transition">
+        <div className="ml-auto  mr-[7%] z-10">
+          <button className="bg-blue-600 text-white text-sm font-medium px-10 py-2 rounded-full flex items-center gap-2 hover:bg-blue-700 transition">
             CLICK
-            <span className="bg-white text-blue-600 rounded-full p-1">
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </span>
+             <Image
+                    src="/right-arrow.svg" // assuming image is placed in /public folder
+                    alt="Arrow Button"
+                    width={28}
+                    height={28}
+                  />
           </button>
         </div>
       </div>

@@ -13,7 +13,7 @@ const navItems = [
   { label: "Notifications Management", path: "/notifications" },
   { label: "Dispute Management", path: "/dispute" },
   { label: "System Settings", path: "/settings" },
-  { label: "Logout", path: "/logout" },
+  { label: "Logout", path: "/login" },
 ];
 
 const data = [

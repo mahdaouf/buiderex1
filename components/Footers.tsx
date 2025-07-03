@@ -4,38 +4,40 @@ const Footers = () => {
   return (
     <>
       {/* Main Footer */}
-      <footer className="bg-black text-white px-6 md:px-24 pt-12 pb-8 text-sm font-sans">
+     <footer
+  className="text-white px-6 md:px-24 pt-12 pb-8 text-sm font-sans bg-cover bg-center"
+  style={{ backgroundImage: "url('/bgFooter.jpg')" }}
+>
   {/* Navigation Section */}
-  <div className="max-w-7xl mx-auto  pb-10 ml-[13%]">
+  <div className="max-w-7xl mx-auto pb-10 ml-[5%]">
     <div className="text-white font-bold text-xl">
       <img
-        src='/builder-name.png'
+        src="/builder-name.png"
         alt="The Builder Network Logo"
-        className="h-12 mb-8" // Tailwind CSS classes for the image itself
+        className="h-12 mb-8"
       />
     </div>
-  
+
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 text-xs text-white">
-      <ul className="space-y-1.5">
+      <ul className="space-y-4">
         <li><a href="#" className="underline">Post a job</a></li>
         <li><a href="#" className="underline">How it works</a></li>
         <li><a href="#" className="underline">Find trades</a></li>
         <li><a href="#" className="underline">Customer helpdesk</a></li>
-        <li><a href="#" className="underline">Ask a trades'<br/> person</a></li>
       </ul>
-      <ul className="space-y-1.5">
-        <li><a href="#" className="underline">Register as trades<br/>person</a></li>
+      <ul className="space-y-4">
+        <li><a href="#" className="underline">Register as trades person</a></li>
         <li><a href="#" className="underline">Quality requirements</a></li>
         <li><a href="#" className="underline">Reviews policy</a></li>
         <li><a href="#" className="underline">Tradespeople helpdesk</a></li>
       </ul>
-      <ul className="space-y-1.5">
+      <ul className="space-y-4">
         <li><a href="#" className="underline">About us</a></li>
         <li><a href="#" className="underline">Press and media</a></li>
         <li><a href="#" className="underline">Vacancies</a></li>
         <li><a href="#" className="underline">Become a partner</a></li>
       </ul>
-      <ul className="space-y-1.5">
+      <ul className="space-y-4">
         <li><a href="#" className="underline">Trades</a></li>
         <li><a href="#" className="underline">Services</a></li>
         <li><a href="#" className="underline">Cities</a></li>
@@ -45,7 +47,8 @@ const Footers = () => {
   </div>
 
   {/* Trustpilot + Store Badges */}
-  <div className="max-w-7xl mx-auto mt-6 flex flex-col md:flex-row justify-between items-center gap-4 ml-[13%] mr-[10%]">
+    {/* Trustpilot + Store Badges */}
+  <div className="max-w-7xl mx-auto mt-6 flex flex-col md:flex-row justify-between items-center gap-4 ml-[5%] mr-[10%]">
     {/* Left: Social & Trustpilot */}
     <div className="flex flex-wrap items-center gap-3">
       {/* Icons */}
@@ -76,80 +79,67 @@ const Footers = () => {
       <a href=""><img src="/google-play.svg" alt="Google Play" className="h-10" /></a>
     </div>
   </div>
-
   {/* Bottom Links */}
-  <div className="max-w-7xl mx-auto mt-6 flex flex-col md:flex-row justify-between items-center text-white text-xs ml-[13%] mr-[10%]">
+  <div className="max-w-7xl mx-auto mt-6 flex flex-col md:flex-row justify-between items-center text-white text-xs ml-[5%] mr-[10%]">
     <div className="space-x-4 mb-2 md:mb-0">
       <a href="#" className="underline">Privacy</a>
       <a href="#" className="underline">Cookie policy</a>
       <a href="#" className="underline">Cookie settings</a>
       <a href="#" className="underline">Terms and conditions</a>
     </div>
-    <div>© 2008–2025 The Builder <br/> Network Limited</div>
   </div>
 </footer>
 
+
       {/* Blue Panel */}
-      <section className="bg-gradient-to-b from-blue-600 to-blue-800 text-white px-10 md:px-52 py-20 text-xs">
+      <section className="bg-[#1646D2] text-[#FFFFFF] md:px-24 py-8 text-[13px]">
+  <div className="mb-8 mr-[10%] mt-[4%] ml-[5%]">
+    <p className="font-bold text-[19.38px] mb-6">Find tradespeople in your area</p>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-4">
+      {[
+        "London", "Manchester", "Glasgow", "Bristol", "Birmingham", "Nottingham",
+        "Leeds", "Liverpool", "Sheffield", "Edinburgh", "Cardiff", "Leicester",
+        "Stockport", "Newcastle Upon Tyne", "Milton Keynes", "Northampton",
+        "Norwich", "Derby", "Reading", "Coventry", "Stoke On Trent", "Cambridge",
+        "Southampton", "More cities +"
+      ].map(city => (
+        <a
+          key={city}
+          href="#"
+          className="underline hover:text-black block break-words whitespace-pre-line"
+        >
+          {city}
+        </a>
+      ))}
+    </div>
+  </div>
 
-        {/* Find tradespeople */}
-        <div className="mb-24">
-          <h3 className="font-semibold mb-8 text-sm md:text-base ml-[5%]">Find tradespeople in your area</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-5 ml-[5%]">
-            {[
-              "London", "Manchester", "Glasgow", "Bristol", "Birmingham",
-              "Nottingham", "Leeds", "Liverpool", "Sheffield", "Edinburgh",
-              "Cardiff", "Leicester", "Stockport", "Newcastle Upon Tyne",
-              "Milton Keynes", "Northampton", "Norwich", "Derby", "Reading",
-              "Coventry", "Stoke On Trent", "Cambridge", "Southampton", "More cities +"
-            ].map(city => (
-              <a
-                key={city}
-                href="#"
-                className="underline font-sans text-xs md:text-sm"
-                style={{ fontFamily: 'Inter, sans-serif' }}
-              >
-                {city}
-              </a>
-            ))}
-          </div>
-        </div>
+  <div className="mb-2 mr-[10%] ml-[5%]">
+    <p className="font-bold text-[19.38px] mb-6">Our tradespeople's professions</p>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-4">
+      {[
+        "Handymen", "Painters and\nDecorators", "Builders", "Landscape Gardeners",
+        "Carpenters", "Plasterers", "Tilers", "Flooring Fitters", "Fencers",
+        "Bricklayers", "Bathroom Fitters", "Window Fitters", "Kitchen Fitters",
+        "Fascias and Soffits\nInstallers", "Gas Engineers", "Roofers",
+        "Fireplace Installers", "More trades +"
+      ].map(trade => (
+        <a
+          key={trade}
+          href="#"
+          className="underline hover:text-black block break-words whitespace-pre-line"
+        >
+          {trade}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
 
-        {/* Our tradespeople */}
-        <div>
-          <h3 className="font-semibold mb-8 text-sm md:text-base ml-[5%]">Our tradespeople's professions</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-5 ml-[5%]">
-            {[
-              "Handymen", "Painters and Decorators", "Builders", "Landscape Gardeners",
-              "Carpenters", "Plasterers", "Tilers", "Flooring Fitters", "Fencers",
-              "Bricklayers", "Bathroom Fitters", "Window Fitters", "Kitchen Fitters",
-              "Fascias and Soffits Installers", "Gas Engineers", "Roofers",
-              "Fireplace Installers", "More trades +"
-            ].map(trade => (
-              <a
-                key={trade}
-                href="#"
-                className="underline font-sans text-xs md:text-sm"
-                style={{ fontFamily: 'Inter, sans-serif' }}
-              >
-                {trade}
-              </a>
-            ))}
-          </div>
-        </div>
-
-      </section>
 
       {/* Partner section */}
-      <div className="bg-black text-white text-center text-[11px] py-4 px-6">
-        Part of the Instar Group and Anti family <br />
-        USA: <a href="#" className="underline">HomeAdvisor</a> & <a href="#" className="underline">Anti</a> & <a href="#" className="underline">Instar</a> &nbsp;
-        Canada: <a href="#" className="underline">Homes</a> &nbsp;
-        The Netherlands: <a href="#" className="underline">Workshop</a> &nbsp;
-        France: <a href="#" className="underline">Travail</a> &nbsp;
-        Germany: <a href="#" className="underline">Hammer</a> &nbsp;
-        Austria: <a href="#" className="underline">Hammer</a> &nbsp;
-        Italy: <a href="#" className="underline">Instar</a>
+      <div className="bg-[#FFFFFF] text-[#62626A] text-center text-[14px] py-4 px-6">
+        <div>©2025 The Builder Network Limited</div>
       </div>
     </>
   );

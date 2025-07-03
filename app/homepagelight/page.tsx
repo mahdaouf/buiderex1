@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import JobBanners from "@/components/JobBanners";
 import Footers from "@/components/Footers";
+import ServiceCarousel from '@/components/ServiceCarousel';
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <img
         src='/logo.png'
         alt="The Builder Network Logo"
-        className="h-12 ml-14" // Tailwind CSS classes for the image itself
+        className="h-12 ml-8" // Tailwind CSS classes for the image itself
       />
     </div>
         <nav className="flex items-center space-x-2 text-[#000000] text-sm">
@@ -22,12 +23,12 @@ export default function Home() {
   Post a job
 </a>
 
-<a href="/logout" className="py-2 px-4 rounded-full bg-white text-[#000000] text-left hover:bg-[#1646D2] hover:text-white transition-colors">
+<a href="/login" className="py-2 px-4 rounded-full bg-white text-[#000000] text-left hover:bg-[#1646D2] hover:text-white transition-colors">
   Log in
 </a>
 
-<button className="bg-white text-[#000000] text-left py-2 px-4 rounded-full hover:bg-[#1646D2] hover:text-white transition-colors">
-  SIGN UP AS A TRADES' PERSON
+<button className="bg-white text-[#000000] text-left py-2 px-4 rounded-full hover:bg-[#1646D2] hover:text-white transition-colors"><a href="/signuptrades">
+  SIGN UP AS A TRADES&apos; PERSON</a>
 </button>
 
         </nav>
@@ -117,6 +118,136 @@ export default function Home() {
 </section>
 
 
+
+<div className="bg-[#F7F7F7] px-20 py-20 flex items-center justify-between"></div>
+
+<section className="relative w-full min-h-screen">
+  {/* Background image with custom shape overlay */}
+  <div className="absolute inset-0 -z-10">
+          <Image
+            src='/b311.jpg'
+            alt="Background"
+            fill
+            className="object-cover"
+          />
+        </div>
+   <img src="4h2.png" alt="Bottom Image" className="w-full h-[130px] z-10 relative -mb-20 " />
+  {/* Foreground Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row items-start gap-10 mt-18">
+    {/* Left Side - Text + Cards */}
+    <div className="flex-1 text-white">
+      <h2 className="text-4xl font-bold mb-4">
+        Why The Builder Network is  <br />
+        <span className="text-white">the Reliable Way</span>
+      </h2>
+      <p className="text-[13px] mb-10 max-w-lg">
+        Hiring a tradesperson when you need one isn’t always easy. The Builder Network simplifies
+        the process, giving you confidence and control every step of the way.
+      </p>
+     <div className="max-w-[682px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-[320px]">
+            {[
+              {
+                title: 'Find Skilled Tradespeople',
+                desc: 'Post your job for free and connect with professionals who have the right skills for the task. Only those interested will respond — you choose who to engage.',
+                icon: '/1.png',
+              },
+              {
+                title: 'Genuine Customer Reviews',
+                desc: 'Read real reviews from previous \n customers to help you make informed \n hiring decisions with confidence.',
+                icon: '/2.png',
+              },
+              {
+                title: 'Full Control at Every Step',
+                desc: 'Browse profiles, work history, and ratings before you chat. Only the tradespeople \nyou select can contact you.\n \n',
+                icon: '/3.png',
+              },
+              {
+                title: 'A Hassle-Free Experience',
+                desc: 'No cold calls, no pressure. Just an easy-to-use platform that lets you manage the \n process on your terms — from start to finish.',
+                icon: '/4.png',
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white text-[#74787C] p-5 rounded-xl shadow flex items-start space-x-2"
+              >
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  width={62}
+                  height={92}
+                  className="-ml-2 -mt-5"
+                />
+                <div>
+                  <h3 className="font-semibold text-[13px] h-[10px] text-[#000000] mb-4">{item.title}</h3>
+                  <p className="text-[11px] whitespace-pre-line">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          </div>
+    </div>
+  </div>
+  <div className="bg-[#1646D2] text-white py-6 px-6 flex flex-col sm:flex-row items-center justify-between">
+        <h3 className="text-3xl font-semibold mb-3 sm:mb-0 ml-30">
+          Ready to hire a trades&apos; person?
+        </h3>
+        <button className="bg-white text-[#000000] font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition mr-50">
+          Post your job
+        </button>
+      </div>
+</section>
+
+
+
+
+
+<div className="bg-[#FFFFFF] min-h-screen">
+  <ServiceCarousel />
+</div>
+
+
+
+   <>
+      <style>
+        {`
+          @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+          }
+
+          .scroll-left {
+            animation: scroll-left 60s linear infinite;
+          }
+        `}
+      </style>
+
+      <div className="bg-[#0047FF] w-full overflow-hidden py-2">
+        <div className="flex whitespace-nowrap scroll-left">
+          <Image
+            src="/unnamed.png"
+            alt="Scrolling Text"
+            width={1600}
+            height={60}
+          
+          />
+          <Image
+            src="/unnamed.png"
+            alt="Scrolling Text Duplicate"
+            width={1600}
+            height={60}
+            
+          />
+        </div>
+      </div>
+    </>
+
+
+
+
+
+
 <section className="relative w-full min-h-screen flex items-center justify-center">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
@@ -143,7 +274,7 @@ export default function Home() {
           <p className="text-gray-600 mb-6">
             Join a trusted platform built to help tradespeople like you win more jobs.
             Sign up for free and get matched with local opportunities that suit your skills and schedule.
-            Whether you’re after big projects or quick fillers — the choice is yours.
+            Whether you&apos;re after big projects or quick fillers — the choice is yours.
           </p>
           <button className="bg-[#1646D2] text-white py-3 px-6 rounded-full font-semibold hover:bg-blue-700 transition">
             Tradespeople — Join for Free
@@ -196,17 +327,17 @@ export default function Home() {
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 relative">
 
       {/* Text Content */}
-      <div className="md:w-1/2 ml-[14%] z-10">
+      <div className="md:w-1/2 z-10">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Download our app</h2>
-        <p className="mb-6 text-sm md:text-base">
+        <p className="mb-10 text-sm md:text-base">
           Posting and managing your jobs is even easier with the Builder Network app.
           Add photos and information in an instant and keep things moving with
           notifications and chat, allowing you to message tradespeople wherever you are.
-          Once the job's done, leave a rating and review straight from your phone.
+          Once the job&apos;s done, leave a rating and review straight from your phone.
         </p>
 
         {/* App store buttons */}
-        <div className="flex gap-1 mb-4 -ml-5">
+        <div className="flex gap-1 mb-8 -ml-5 ">
           <img
             src="google-play.svg"
             alt="Get it on Google Play"
@@ -220,9 +351,12 @@ export default function Home() {
         </div>
 
         <p className="text-sm">
-          Looking for our trades' person app?{" "}
-          <a href="#" className="underline text-white">Find it here</a>
+        Looking for our trades&apos;<br /> person app?
+        <span className="inline-block ml-35">
+         <a href="#" className="underline text-white">Find it here</a>
+        </span>
         </p>
+
       </div>
 
       {/* Phone Image */}
@@ -330,6 +464,7 @@ export default function Home() {
        {/*JobBanner1*/}
        <JobBanners />
       {/* Footer1 */}
+      
       <Footers />
     </div>
   );
